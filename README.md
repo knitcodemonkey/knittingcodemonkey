@@ -1,166 +1,52 @@
-# webpack/react-starter
+>## A Big Update Is Coming
 
-Starter template for react and webpack.
+>React Hot Loader 3 is [on the horizon](https://github.com/gaearon/react-hot-loader/pull/240), and you can try it today ([boilerplate branch](https://github.com/gaearon/react-hot-boilerplate/pull/61), [upgrade example](https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915)). It fixes some [long-standing issues](https://twitter.com/dan_abramov/status/722040946075045888) with both React Hot Loader and React Transform, and is intended as a replacement for both. The docs are not there yet, but they will be added before the final release. For now, [this commit](https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915) is a good reference.
 
-## Features
 
-* Compilation with webpack
-* React and jsx
-* react-router
-* Stylesheets can be CSS, LESS, SASS, Stylus or mixed
-* Embedded resources like images or fonts use DataUrls if appropriate
-* A simple flag loads a react component (and dependencies) on demand.
-* Development
-  * Development server
-  * Optionally Hot Module Replacement development server (LiveReload for Stylesheets and React components enabled)
-  * Uses SourceUrl for performance, but you may switch to SourceMaps easily
-* Production
-  * Server example for prerendering for React components
-  * Initial data inlined in page
-  * Long Term Caching through file hashes enabled
-  * Generate separate css file to avoid FOUC
-  * Minimized CSS and javascript
-* Also supports coffee-script files if you are more a coffee-script person.
-* You can also require markdown or text files for your content.
+React Hot Boilerplate
+=====================
 
-## Local Installation
+The minimal dev environment to enable live-editing React components.
 
-Install [node.js](https://nodejs.org) or [io.js](https://iojs.org)
+### Usage
 
-Just clone this repo and change the `origin` git remote.
-
-``` text
+```
 npm install
+npm start
+open http://localhost:3000
 ```
 
-## Installation via Vagrant
+Now edit `src/App.js`.  
+Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
-Install [vagrant](https://vagrantup.com)
+### Linting
 
-``` text
-vagrant up
-vagrant ssh
-cd /vagrant
+This boilerplate project includes React-friendly ESLint configuration.
+
+```
+npm run lint
 ```
 
-## Development server
+### Using `0.0.0.0` as Host
 
-``` text
-# start the webpack-dev-server
-npm run dev-server
-# wait for the first compilation is successful
+You may want to change the host in `server.js` and `webpack.config.js` from `localhost` to `0.0.0.0` to allow access from same WiFi network. This is not enabled by default because it is reported to cause problems on Windows. This may also be useful if you're using a VM.
 
-# in another terminal/console
-# start the node.js server in development mode
-npm run start-dev
+### Missing Features
 
-# open this url in your browser
-http://localhost:8080/
-```
+This boilerplate is purposefully simple to show the minimal configuration for React Hot Loader. For a real project, you'll want to add a separate config for production with hot reloading disabled and minification enabled. You'll also want to add a router, styles and maybe combine dev server with an existing server. This is out of scope of this boilerplate, but you may want to look into [other starter kits](https://github.com/gaearon/react-hot-loader/blob/master/docs/README.md#starter-kits).
 
-The configuration is `webpack-dev-server.config.js`.
+### Dependencies
 
-It automatically recompiles and refreshes the page when files are changed.
+* React
+* Webpack
+* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+* [babel-loader](https://github.com/babel/babel-loader)
+* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
 
-Also check the [webpack-dev-server documentation](http://webpack.github.io/docs/webpack-dev-server.html).
+### Resources
 
-
-## Hot Module Replacement development server
-
-``` text
-# start the webpack-dev-server in HMR mode
-npm run hot-dev-server
-# wait for the first compilation is successful
-
-# in another terminal/console
-# start the node.js server in development mode
-npm run start-dev
-
-# open this url in your browser
-http://localhost:8080/
-```
-
-The configuration is `webpack-hot-dev-server.config.js`.
-
-It automatically recompiles when files are changed. When a hot-replacement-enabled file is changed (i. e. stylesheets or React components) the module is hot-replaced. If Hot Replacement is not possible the page is refreshed.
-
-Hot Module Replacement has a performance impact on compilation.
-
-
-## Production compilation and server
-
-``` text
-# build the client bundle and the prerendering bundle
-npm run build
-
-# start the node.js server in production mode
-npm run start
-
-# open this url in your browser
-http://localhost:8080/
-```
-
-The configuration is `webpack-production.config.js`.
-
-The server is at `lib/server.js`
-
-The production setting builds two configurations: one for the client (`build/public`) and one for the serverside prerendering (`build/prerender`).
-
-
-## Legacy static assets
-
-Assets in `public` are also served.
-
-
-## Build visualization
-
-After a production build you may want to visualize your modules and chunks tree.
-
-Use the [analyse tool](http://webpack.github.io/analyse/) with the file at `build/stats.json`.
-
-
-## Loaders and file types
-
-Many file types are preconfigured, but not every loader is installed. If you get an error like `Cannot find module "xxx-loader"`, you'll need to install the loader with `npm install xxx-loader --save` and restart the compilation.
-
-
-## Common changes to the configuration
-
-### Add more entry points
-
-(for a multi page app)
-
-1. Add an entry point to `make-webpack-config.js` (`var entry`).
-2. Add a new top-level react component in `app` (`xxxRoutes.js`, `xxxStoreDescriptions.js`, `xxxStores.js`).
-3. (Optional) Enable `commonsChunk` in `webpack-production.config.js` and add `<script src="COMMONS_URL"></script>` to `app/prerender.html`.
-4. Modify the server code to require, serve and prerender the other entry point.
-5. Restart compilation.
-
-### Switch devtool to SourceMaps
-
-Change `devtool` property in `webpack-dev-server.config.js` and `webpack-hot-dev-server.config.js` to `"source-map"` (better module names) or `"eval-source-map"` (faster compilation).
-
-SourceMaps have a performance impact on compilation.
-
-### Enable SourceMaps in production
-
-1. Uncomment the `devtool` line in `webpack-production.config.js`.
-2. Make sure that the folder `build\public\debugging` is access controlled, i. e. by password.
-
-SourceMaps have a performance impact on compilation.
-
-SourceMaps contains your unminimized source code, so you need to restrict access to `build\public\debugging`.
-
-### Coffeescript
-
-Coffeescript is not installed/enabled by default to not disturb non-coffee developer, but you can install it easily:
-
-1. `npm install coffee-redux-loader --save`
-2. In `make-webpack-config.js` add `".coffee"` to the `var extensions = ...` line.
-
-
-## License
-
-Copyright (c) 2012-2015 Tobias Koppers [![Gittip donate button](http://img.shields.io/gittip/sokra.png)](https://www.gittip.com/sokra/)
-
-MIT (http://www.opensource.org/licenses/mit-license.php)
+* [Demo video](http://vimeo.com/100010922)
+* [react-hot-loader on Github](https://github.com/gaearon/react-hot-loader)
+* [Integrating JSX live reload into your workflow](http://gaearon.github.io/react-hot-loader/getstarted/)
+* [Troubleshooting guide](https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md)
+* Ping dan_abramov on Twitter or #reactjs IRC
