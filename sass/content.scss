@@ -1,0 +1,18 @@
+@import 'base/variables';
+
+.main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
+.main-content {
+  max-width: $minDesktop;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $lightgray;
+}

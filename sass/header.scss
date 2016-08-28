@@ -1,0 +1,33 @@
+@import 'base/variables';
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $gray;
+}
+
+.header-content {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  display: block;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    color: $lightgray;
+
+    a, a:visited {
+      color: $lightgray;
+    }
+  }
+
+}

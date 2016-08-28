@@ -1,16 +1,19 @@
+require('../sass/content.scss');
 import React, { Component } from 'react';
 
 export default class Content extends Component {
   render() {
     return (
-      <h1>Hello, JenDev.</h1>
+      <div className="main">
+        <div className="main-content">
+          <img src="/img/kcm_logo_2.jpg" alt="Knitting Code Monkey Logo" />
+          <div className="main-content__wurdz">
+            <p>
+
+            </p>
+          </div>
+        </div>
+      </div>
     );
   }
 }
-
-var styles = {
-  content: {
-    width: '100%',
-  },
-
-};

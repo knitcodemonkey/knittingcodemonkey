@@ -1,8 +1,30 @@
 @import 'base/variables';
 
+
 html,
 body {
   margin: 0;
   padding: 0;
   background: url("/img/kcm_bg.png") repeat;
+  font-family: 'Jaldi', sans-serif;
+  font-size: 18px;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: normal;
+}
+
+p {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: $darkblue;
 }
