@@ -7,9 +7,9 @@ export default class App extends Component {
   render() {
     return (
       <div className='kcm'>
-        <Header />
-        <Content />
-        <Footer />
+        <Header id="header" ref="header" />
+        <Content id="main" ref="main" />
+        <Footer id="footer" ref="footer" />
       </div>
     );
   }

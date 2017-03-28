@@ -26,15 +26,14 @@ class Footer extends React.Component {
         that.setState({profile: response.data});
       })
       .catch(function(error) {
-        console.log('Request failed', error)
+        console.log('Request failed', error);
       });
   }
 
   render() {
     var year = new Date();
-
     return (
-      <div className="footer">
+      <div id="footer">
         <div className="footer-content">
           <div className="footer-content__avatar">
             <img src={this.state.profile.avatar_url} alt="avatar" />
@@ -42,7 +41,7 @@ class Footer extends React.Component {
           <div className="footer-content__contact">
             <span>{this.state.profile.name}</span>
             <span>{this.state.profile.company}</span>
-            <Social />
+            <Social github_url={this.state.profile.html_url} />
           </div>
           <div className="footer-content__bio">{this.state.profile.bio}</div>
           <div className="footer-content__copy">

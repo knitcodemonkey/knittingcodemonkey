@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class Content extends Component {
   render() {
     return (
-      <div className="main">
+      <div id="main">
         <div className="main-content">
           <img className="main-content__avatar curve" src="/img/JenLukerAvatar.jpeg" alt="Jen Luker" />
           <div className="main-content__details">

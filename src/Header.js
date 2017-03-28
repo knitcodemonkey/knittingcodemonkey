@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class Header extends Component {
   render() {
     return (
-      <div className="header">
+      <div id="header">
         <div className="header-content">
           <ul className="header-content__nav">
             <li><a href="" title="Contact Me">Contact</a></li>

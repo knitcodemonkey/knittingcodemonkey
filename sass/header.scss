@@ -1,6 +1,6 @@
 @import 'base/variables';
 
-.header {
+#header {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -23,10 +23,10 @@
 
   li {
     list-style-type: none;
-    color: $lightgray;
+    color: $white;
 
     a, a:visited {
-      color: $lightgray;
+      color: $white;
     }
   }
 

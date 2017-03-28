@@ -1,10 +1,11 @@
 @import 'base/variables';
 
-.footer {
+#footer {
   width: 100%;
-  background-color: $lightgray;
+  background-color: $white;
   position: fixed;
   bottom: 0;
+  border-top: 1px solid $lightgray;
 }
 
 .footer-content {
