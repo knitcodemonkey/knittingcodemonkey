@@ -16,4 +16,36 @@
   margin: 0 auto;
   padding: 20px;
   background-color: $lightgray;
+  overflow: auto;
+}
+
+.main-content__avatar {
+  width: 33%;
+  height: 33%;
+  max-width: 250px;
+  border-radius: 50%;
+  -webkit-shape-outside:circle();
+  shape-outside:circle();
+  float: left;
+  margin-right: 40px;
+}
+
+.main-content__details {
+  width: 100%;
+  padding: 0;
+  flex-direction: row;
+
+  .title {
+    margin: 0 0 10px 0;
+    line-height: 100%;
+  }
+
+  .info {
+    line-height: 130%;
+  }
+
+  .text {
+    line-height: 130%;
+    margin: 10px 0;
+  }
 }
