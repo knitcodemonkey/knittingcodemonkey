@@ -6,10 +6,10 @@ export default class Header extends Component {
     return (
       <div className="header">
         <div className="header-content">
-          <ul>
-            <li><a href="" title="">Contact</a></li>
-            <li><a href="" title="">About</a></li>
-            <li><a href="" title="">Upcoming Events</a></li>
+          <ul className="header-content__nav">
+            <li><a href="" title="Contact Me">Contact</a></li>
+            <li><a href="" title="About Me">About Me</a></li>
+            <li><a href="" title="Upcoming Events">Upcoming Events</a></li>
             <li><a href="http://strongishfiber.com" title="">The other me</a></li>
           </ul>
         </div>

@@ -7,7 +7,7 @@ export default class Content extends Component {
       <div className="main">
         <div className="main-content">
           <img src="/img/kcm_logo_2.jpg" alt="Knitting Code Monkey Logo" />
-          <div className="main-content__wurdz">
+          <div className="main-content__words">
             <p>
 
             </p>
