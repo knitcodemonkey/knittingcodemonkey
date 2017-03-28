@@ -23,7 +23,7 @@
   width: 33%;
   height: 33%;
   max-width: 250px;
-  border-radius: 50%;
+  border-radius: 5px 50% 50% 5px;
   -webkit-shape-outside:circle();
   shape-outside:circle();
   float: left;
