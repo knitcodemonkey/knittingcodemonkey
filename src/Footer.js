@@ -13,7 +13,7 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    var url = "https://api.github.com/users/knittingcodemonkey";
+    var url = 'https://api.github.com/users/knittingcodemonkey';
     var that = this;
     Axios.get(url)
       .then(function (response) {

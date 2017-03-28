@@ -2,10 +2,6 @@
   "name": "KnittingCodeMonkey.com",
   "version": "1.0.0",
   "description": "Jen Luker, Senior Software Engineer",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/knittingcodemonkey/knittingcodemonkey.git"
-  },
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
