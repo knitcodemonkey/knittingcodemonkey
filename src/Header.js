@@ -7,9 +7,9 @@ export default class Header extends Component {
       <div id="header">
         <div className="header-content">
           <ul className="header-content__nav">
-            <li><a href="" title="Contact Me">Contact</a></li>
+            {/*<li><a href="" title="Contact Me">Contact</a></li>*/}
             <li><a href="" title="About Me">About Me</a></li>
-            <li><a href="" title="Upcoming Events">Upcoming Events</a></li>
+            {/*<li><a href="" title="Upcoming Events">Upcoming Events</a></li>*/}
             <li><a href="http://strongishfiber.com" title="">The other me</a></li>
           </ul>
         </div>

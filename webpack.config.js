@@ -4,14 +4,12 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var webpackConfig = {
   devtool: 'eval',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './src/index'
-  ],
+  entry: {
+    homepage: './src/index.js',
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '/dist/'
   },
   plugins: [
