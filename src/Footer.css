@@ -1,0 +1,79 @@
+.footer-content__avatar img {
+    animation: App-logo-spin infinite 20s linear;
+    height: 100px;
+}
+
+.footer-content__avatar {
+    text-align: left;
+    float: left;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+}
+
+.nowrap {
+    hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    white-space: nowrap;
+}
+
+.footer-content__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    flex: 1 100%;
+    overflow: auto;
+    height: 100px;
+}
+
+.footer-content__contact > span {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    white-space: pre-wrap;
+}
+
+.footer-content__bio {
+    clear: both;
+    padding: 10px 0;
+}
+
+.footer-content__copy {
+    clear: both;
+    font-size: 10px;
+    color: #787f86;
+    text-align: right;
+}
+
+@media (min-width: 600px) {
+    .footer {
+        max-width: calc(80% - 2rem);
+    }
+
+    .footer-content__avatar {
+        float: left;
+        height: 100px;
+    }
+
+    .footer-content__contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        flex: 0 100%;
+    }
+
+    .footer-content__bio {
+        clear: none;
+    }
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
