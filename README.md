@@ -5,4 +5,4 @@ Welcome to my website repo. This is where I play around with new technologies, f
 
 Unfortunately...
 
-This means this site will look broken, or worse, outdated. I'm not an epic designer, but I am a nerdy programmer always looking to learn more. If you are looking for beauty, check out http://www.strongishfiber.com. Otherwise, feel free to check out the various releases, or any demos I may have added.   
+This means this site will look broken, or worse, outdated. I'm not an epic designer, but I am a nerdy programmer always looking to learn more. If you are looking for beauty, check out http://www.strongishfiber.com. Otherwise, feel free to check out the various tagged releases, or any demos I may have added.   
