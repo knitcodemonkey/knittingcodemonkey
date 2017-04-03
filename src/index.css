@@ -1,0 +1,110 @@
+element {
+  /* colors */
+  --socialIcon: '#687a4f';
+  --navbackground: '#787f86';
+  --disabledText: '#787f86';
+  --background: '#f5f5f5';
+  --border: '#cccccc';
+  --navLinks: '#f5f5f5';
+  --links: '#687a4f';
+  --pink: '#f2d2d1';
+  --darkblue: '#40647c';
+  --lightblue: '#a8c8d8';
+  --yellow: '#d5d282';
+
+  /* breakpoints */
+  --maxWidth: '1280px';
+  --minWidth: '320px';
+  --minDesktop: '1024px';
+  --minTablet: '768px';
+  --mobile: '600px';
+}
+
+html, body {
+  background: url(./img/kcm_bg.png) repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Jaldi', sans-serif;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 320px;
+}
+
+a, a:visited {
+  color: #687a4f;
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer, section {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  position: relative;
+}
+
+header {
+  background: #787f86;
+}
+
+header, .content, footer {
+  box-shadow: 0 0px 6px #40647c;
+}
+
+section > div,
+header > div,
+footer > div {
+  width: 100%;
+}
+
+section {
+  align-items: stretch;
+  flex: 1 100%;
+}
+
+.content {
+  background: #f5f5f5;
+}
+
+
+section > div {
+
+}
+
+footer {
+  background: #f5f5f5;
+  border: 1px solid #cccccc;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
+  section > div,
+  header > div,
+  footer > div {
+    width: 100%;
+  }
+
+  .space-around {
+    margin: 20px;
+  }
+
+  .space-between {
+    padding: 20px;
+  }
+}

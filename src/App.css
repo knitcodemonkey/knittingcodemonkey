@@ -1,0 +1,43 @@
+.main {
+    width: calc(100% - 2rem);
+    box-shadow: 0 0px 6px #40647c;
+}
+
+.main-content__avatar {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  border: 1px solid #cccccc;
+    float: none;
+}
+
+.main-content__details {
+  width: 100%;
+  padding-top: 15px;
+  clear: both;
+}
+
+.title {
+  margin: 10px 0;
+  line-height: 100%;
+}
+
+.text {
+  margin: 10px 0;
+}
+
+@media (min-width: 600px) {
+    .main {
+        width: 80%;
+    }
+
+    .main-content__details {
+        padding: 0;
+        clear: none;
+    }
+
+    .main-content__avatar {
+        float: left;
+        max-height: 300px;
+    }
+}
